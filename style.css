@@ -1,4 +1,8 @@
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 /***** FONT ******/
 @font-face {
@@ -49,33 +53,44 @@
 }
 
 .home_right_flowers {
+   overflow: hidden;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -72px;
+    rotate: 260deg;
     z-index: -1;
-    width: 50%;
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 .home_side_flowers {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    bottom: -10px;
     z-index: -1;
-    width: 35%;
-    opacity: 0.4;
+    rotate: 84deg;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out; /* Smooth opacity transition */
+    overflow: hidden;
+}
+
+.home_pokeball {
+  width: 15%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 20%;
+  rotate: 10deg;
+  opacity: 0.6;
 }
 
 .home_bao {
     position: absolute;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 1;
     right: 31%;
     width: 15%;
 }
 
 .home_baby_shower {
-    color: #bbd4bd;
+    color: #dc989e;
     text-align: center;
     font-size: clamp(3.5rem, 22vw, 11rem);
     line-height: 0.9;
@@ -100,8 +115,8 @@
 
 .home_and {
     position: static;        /* Remove absolute positioning */
-    color: #d6ccc2;
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: #dc989e;
+    /* font-size: clamp(1.5rem, 5vw, 3rem); */
     margin: 0 0.5rem;        /* Adjust spacing if needed */
 }
 
@@ -117,13 +132,13 @@
     align-items: center;
     justify-content: center;
     margin: 10px 0;
-    color: #bbb2a8;
+    color: #dc989e;
   }
   
 .line {
     flex: 1;
     height: 1px;
-    background-color: #bbb2a8
+    background-color: #dc989e
   }
   
   .center-text {
@@ -146,62 +161,56 @@
   .first_pipe, .second_pipe {
     font-size: 3rem;
     padding: 0 2%;
-    color: #d6ccc2;
+    color: #dc989e;
   }
 
   .nd {
     margin-left: -6px;
   }
 
-  .home_address {
-    font-size: clamp(1.2rem, 2vw, 1.5rem)
+  .home_address a{
+    color: #84a998;
   }
 
 
-  /***** DETAILS *****/
-  .details {
+  /***** ANNOUNCEMENT *****/
+  .announcement {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
     text-align: center;
-    /* display: flex; */
-    /* flex-direction: column; */
-    background-color: rgba(246, 236, 225, 0.5);
+    background-color: rgb(237, 207, 205, 0.6);
+    padding: 0;
   }
 
-  .details_flowers {
-    top: 0;
-    left: 0;
-    transform: scaleX(-1);
-    width: 72%;
+  .announcement_ultrasound {
+    width: 100%;
+  }
+
+  .announcement_title {
+    color: #dc989e;
+    margin: -53px 0px 0;
+    font-size: clamp(6rem, 15vw, 12rem);
+  }
+
+  .announcement_eevee {
+    width: 40%;
+  }
+  
+  .announcement_details {
+    line-height: 1.9;
+    margin: 10px 40px;
+  }
+
+  .announcement_bottom_flowers {
     position: absolute;
-    z-index: -1;
-  }
-
-  .details_title {
-    color:#84a998;
-    margin: 50px 0 27px 0;
-    font-size: clamp(4rem, 7vw, 6rem);
-  }
-
-  .details_location {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-  }
-
-  .details_info {
-    text-align: right;
-  }
-
-  .details_info p {
-    letter-spacing: 90;
-    line-height: 1.3;
-  }
-
-  .details_all {
-    font-size: clamp(1.2rem, 2vw, 1.3rem);
-    padding: 30px 0 27px 0;
+    width: 100%;
+    z-index: -2;
+    rotate: 180deg;
+    left: 0;
+    bottom: 0;
   }
 
 /***** RSVP *****/
@@ -443,11 +452,12 @@
   @media only screen and (max-width: 480px) and (orientation: portrait) {
     /*** HOME ***/
     .home_side_flowers {
-        width: 60vw;
+        width: 124vw;
+        opacity: 0.8;
     }
     
     .home_right_flowers {
-        width: 95vw;
+        width: 124vw;
     }
 
     .home {
@@ -462,24 +472,22 @@
         bottom: 10%;
     }
 
-    .home_address {
-        position: absolute; /* Anchor to the bottom of .home */
-        bottom: 0; 
-        right: 0;  /* Aligns to the right side */
-        padding: 10px; /* Optional padding for spacing */
-        text-align: right;
-        width: 100%; /* Optional: makes it stretch full width */
-        background-color: rgba(255, 255, 255, 0.7); /* Optional: adds contrast if needed */
-    }
-
-
     .home_bao {
         position: absolute;
         z-index: -1;
-        opacity: 0.5;
         right: 19%;
         bottom: 31%;
         width: 37%;
+    }
+
+    .home_pokeball {
+      width: 15%;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 20%;
+      rotate: 10deg;
+      opacity: 0.6;
     }
 
     /** RSVP **/
@@ -496,9 +504,9 @@
 
   @media only screen and (max-width: 683px) {
     /*** HOME ***/
-    .home_and {
+    /* .home_and {
         transform: translate(-309%, 81%);
-    }
+    } */
 
     .main-text {
         margin-top: -6%;
