@@ -183,7 +183,7 @@ html, body {
   }
 
 .button_wrapper {
-    bottom: 10%;
+    bottom: 5px;
     position: absolute;
     left: 20%;
     /* margin-bottom: 0%; */
