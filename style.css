@@ -85,12 +85,12 @@ html, body {
   opacity: 0.6;
 }
 
-.home_bao {
+.home_eevee {
   position: absolute;
   z-index: -1;
-  right: 19%;
-  bottom: 31%;
-  width: 37%;
+  right: -1%;
+  bottom: 42%;
+  width: 33%;
 }
 
 .home_baby_shower {
