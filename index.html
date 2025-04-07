@@ -14,6 +14,7 @@
         
         <link rel="stylesheet" href="./style.css">
         <link rel="icon" href="favicon.png" type="image/png">
+        <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
 
         <!-- Open Graph Meta Tags -->
         <meta property="og:title" content="You're Invited" />
@@ -93,6 +94,7 @@
                 <div class="col-12 col-md-6 details">
                     <img class="details_flowers" src="./flowers_corner_white.png">
                     <div class="details_title playlist">Details</div>
+                    
                     <div class="details_info quicksand p-3">
                         <div class="details_location playfair">Date</div>
                         <p>Sunday, May 18th, 2025</p>
@@ -110,6 +112,27 @@
                             <br/><br/>We look forward to seeing you there!</p>
                         <!-- <button type="submit" class="button p-2" id="add-to-calendar">ADD EVENT TO CALENDAR</button> -->
                        
+                    </div>
+
+                    <div class="button_wrapper">
+                        <add-to-calendar-button
+                            name="Alexis and Jeremy's Babyshower"
+                            description="Join us for food, fun, and games! Bring any size diapers to enter the diaper raffle! We hope to see you there!"
+                            startDate="2025-05-18"
+                            endDate="2025-05-18"
+                            startTime="13:00"
+                            endTime="17:00"
+                            location="3121 Chico Way NW, Bremerton, WA 98312"
+                            options="['Apple','Google','iCal','Microsoft365','Outlook.com','Yahoo']"
+                            timeZone="America/Los_Angeles"
+                            trigger="click"
+                            inline
+                            listStyle="modal"
+                            iCalFileName="Reminder-Event"
+                            buttonStyle="date"
+                            size="5"
+                            lightMode="bodyScheme"
+                        />
                     </div>
                     <img class="details_eevee" src="./eevee_green.png">
                     <img class="details_bottom_flowers" src="./flowers_side_white.png">
