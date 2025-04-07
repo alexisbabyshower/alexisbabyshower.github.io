@@ -278,8 +278,11 @@ html, body {
 
 .details_eevee {
   position: absolute;
-    width: 40%;
-    right: 10px;
+  width: 40%;
+  /* right: 10px; */
+  left: 0;
+  top: 34%;
+  transform: scaleX(-1);
 }
 
 /***** RSVP *****/
