@@ -213,6 +213,65 @@ html, body {
     bottom: 0;
   }
 
+ /***** DETAILS *****/
+ .details {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: rgba(246, 236, 225, 0.5);
+}
+
+.details_flowers {
+  top: -74px;
+  left: -19px;
+  transform: scaleX(-1);
+  width: 101%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.details_title {
+  color: #9ca47d;
+  margin: 50px 0 0 0;
+  font-size: clamp(6rem, 9vw, 9rem);
+}
+
+.details_location {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.details_info {
+  text-align: right;
+}
+
+.details_info p {
+  letter-spacing: 90;
+  line-height: 1.5;
+  font-size: clamp(1rem, 3vw, 1rem);
+}
+
+.details_bottom_flowers {
+  position: absolute;
+  z-index: -2;
+  width: 70%;
+  rotate: 270deg;
+  bottom: -20%;
+  left: 0;
+  opacity: 0.4;
+}
+
+.details_eevee {
+  position: absolute;
+    width: 40%;
+    right: 10px;
+}
+
 /***** RSVP *****/
 .rsvp {
     width: 100%;
@@ -223,45 +282,46 @@ html, body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    background-color: rgb(175, 211, 227, 0.30);
 }
 
 
 .rsvp_title {
-    color:#84a998;
+    color:#86a8b7;
     margin: 50px 0 27px 0;
-    font-size: clamp(5rem, 9vw, 8rem);
+    font-size: clamp(8rem, 9vw, 8rem);
   }
 
   .rsvp_flowers {
     position: absolute;
-    transform: scale(-1);
+    rotate: 90deg;
     z-index: -2;
     width: 50%;
-    right: 0;
-    opacity: 0.2;
-    bottom: 0;
+    opacity: 0.3;
+    top: -16%;
+    left: 56%;
   }
 
   .bold {
     font-weight: 900;
   }
 
-  .rsvp_bao {
+  .rsvp_eevee {
     position: absolute;
     width: 49%;
     z-index: -1;
-    top: 4%;
-    left: -14%;
-    opacity: 0.2;
+    top: 0%;
+    left: -5%;
+    opacity: 0.8;
 }
 
-    .rsvp_bao_bt {
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-        right: 0;
-        width: 50%;
-        opacity: 0.5;
+    .rsvp_black_eevee {
+      position: absolute;
+      z-index: -1;
+      bottom: 28%;
+      right: 0;
+      width: 42%;
+      opacity: 0.5;
     }
 
    /***** RSVP FORM PORTRAIT ****/
@@ -284,7 +344,7 @@ html, body {
   text-transform: uppercase;
     width: 75%;
     text-align: left;
-    color: #84a998;
+    color: #86a8b7;
     margin: 40px;
 }
 
@@ -319,13 +379,13 @@ html, body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: rgba(229, 240, 229, 0.4);
+    background-color: rgb(239, 228, 239, 0.8);
 }
 
 .registry_title {
-    color:#84a998;
+    color:#a180be;
     margin: 50px 0 27px 0;
-    font-size: clamp(5rem, 9vw, 8rem);
+    font-size: clamp(6rem, 9vw, 8rem);
 }
 
 .registry_baos {
@@ -338,17 +398,45 @@ html, body {
 
 .registry_flowers {
     position: absolute;
-    width: 80%;
-    top: 0;
+    width: 85%;
+    top: -2%;
     z-index: -1;
-    right: 0;
-    opacity: 0.4;
+    left: -9%;
+    rotate: 201deg;
+    opacity: 1;
 }
+
+.registry_flowers_bt {
+    position: absolute;
+    width: 109%;
+    bottom: -12%;
+    z-index: -1;
+    left: 11%;
+    rotate: 26deg;
+    opacity: 1;
+}
+
+.registry_pokeball {
+  position: absolute;
+  z-index: -1;
+  width: 20%;
+  rotate: -33deg;
+  right: 5%;
+  top: 5%;
+}
+
+.registry_eevee {
+  position: absolute;
+  width: 57%;
+  bottom: 0;
+  left: 0;
+}
+
 .babylist_img {
-    width: 200px;
+    width: 60%;
     margin: 5%;
   }
-  
+
 
 /***** COUNTDOWN *****/
 .countdown {
@@ -363,10 +451,12 @@ html, body {
 }
 
 .countdown_title {
-    color:#84a998;
-    margin: 50px 0 27px 0;
-    font-size: clamp(5rem, 9vw, 8rem);
+    color:#f0bb91;
+    width: 100%;
+    margin-top: 45%;
+    font-size: clamp(6rem, 9vw, 8rem);
 }
+
 
 .countdown_bcg {
     position: absolute;
@@ -418,12 +508,6 @@ html, body {
       color: white;
   }
   
-  .countdown_title {
-      width: 90%;
-      margin-bottom: 10%;
-      margin-top: 10%;
-  }
-  
   .countdown_img {
     margin-top: 100px;
     width: 250px;
@@ -436,11 +520,10 @@ html, body {
   
   .countdown_flowers {
     position: absolute;
-    width: 70%;
+    width: 120%;
     z-index: -1;
-    top: -20%;
-    rotate: 90deg;
-    opacity: 0.3;
+    top: -3%;
+    opacity: 0.8;
   }
 
   img {
@@ -497,7 +580,7 @@ html, body {
 
     /**** REGISTRY ****/
     .babylist_img {
-        width: 150px;
+        width: 60%;
       }
 
   }
