@@ -183,7 +183,7 @@ html, body {
   }
 
 .button_wrapper {
-    bottom: 5px;
+    bottom: 15px;
     position: absolute;
     left: 20%;
     /* margin-bottom: 0%; */
@@ -458,6 +458,47 @@ html, body {
     margin: 5%;
   }
 
+/***** DIAPER RAFFLE *****/
+.diaper_raffle {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  /* justify-content: center; Horizontal centering */
+  align-items: center; /* Vertical centering */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fae9bd94;
+}
+
+.diapers_flowers {
+    position: absolute;
+    width: 150%;
+    bottom: -12%;
+    z-index: -1;
+    rotate: 99deg;
+    opacity: 0.5;
+}
+
+.diapers_eevee_yellow {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  z-index: -1;
+}
+
+.diaper_title {
+  color:#de6d43;
+  margin: 160px 0 27px 0;
+  font-size: clamp(4rem, 9vw, 4rem);
+  z-index: 2;
+}
+
+.diapers_eevee_red {
+  position: absolute;
+  width: 41%;
+  bottom: 7%;
+}
 
 /***** COUNTDOWN *****/
 .countdown {
