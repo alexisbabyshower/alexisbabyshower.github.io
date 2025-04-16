@@ -495,7 +495,7 @@ html, body {
 }
 
 .diapers_eevee_red {
-  position: absolute;
+  /* position: absolute; */
   width: 41%;
   bottom: 7%;
 }
