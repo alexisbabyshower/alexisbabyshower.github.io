@@ -766,3 +766,21 @@ iframe {
 .no-videos .video-button {
   display: none;
 }
+
+.contact_me {
+  background-color: rgba(0, 0, 0, 0.425);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.contact_me_home{
+  background-color: rgba(0, 0, 0, 0.425);
+  color: white;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 20;
+  position-area: top;
+  width: 100%;
+}
