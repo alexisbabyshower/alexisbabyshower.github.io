@@ -36,22 +36,12 @@
     </head>
     <body>
        
-        <h1 class="playlist photos_title">Photos</h1>
+        <h1 class="playlist photos_title">Videos</h1>
         <div class="playfair text-center my-4">
-            <a href="https://alexisbabyshower.github.io" target="_blank" class="btn btn-light">
-              Back to Website
+            <a href="https://alexisbabyshower.github.io/photos" target="_blank" class="btn btn-light">
+              Back to Photos
             </a>
           </div>
-          <div id="video-button-wrapper" class="playfair text-center my-4 video-button">
-            <a href="https://alexisbabyshower.github.io/videos" class="btn btn-dark">
-              Videos
-            </a>
-          </div>
-        <div class="playfair text-center my-4">
-          <a href=" https://docs.google.com/forms/d/e/1FAIpQLSetQUbvBFROpbpzNOaTAFBv2p3xhSEbd9LLUXPsQEAx8-DPQg/viewform?usp=dialog" target="_blank" class="btn btn-dark">
-            Upload Your Photos/Videos
-          </a>
-        </div>
         <div class="photo_section">
             <div class="container">
               <div class="gallery" id="gallery"></div>
@@ -95,7 +85,7 @@
               
                     // Loop through each file and add it to the gallery
                     data.files.forEach(file => {
-                      if (file.mimeType.startsWith('image/')) {
+                      if (file.mimeType.startsWith('video/')) {
                         const thumbnailUrl = `https://drive.google.com/thumbnail?id=${file.id}`;
                         const fullImageUrl = `https://drive.google.com/file/d/${file.id}/preview`; 
       
@@ -111,14 +101,7 @@
               
                         gallery.appendChild(img);
                       }
-
-                        // Detect if there is a video
-                        if (file.mimeType.startsWith('video/')) {
-                            hasVideos = true;
-                        }
                     });
-
-                    
               
                     // Get the next page token
                     pageToken = data.nextPageToken;
@@ -126,12 +109,6 @@
               
                   // Update the counter after all images are added
                   updateImageCounter();
-
-                  if (hasVideos) {
-                    document.body.classList.add("has-videos");
-                  } else {
-                    document.body.classList.add("no-videos");
-                  }
                 }
               
                 // Function to update the image counter
